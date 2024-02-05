@@ -1,0 +1,10 @@
+.venv
+
+.env
+.env.prod
+
+database.db
+
+logs/*
+
+*__pycache__*
