@@ -34,6 +34,7 @@ class Ton(BaseSettings):
     tgr_contract_address: str
     fnz_contract_address: str
     scale_contract_address: str
+    host_url: str
 
 
 class Swap(BaseSettings):
