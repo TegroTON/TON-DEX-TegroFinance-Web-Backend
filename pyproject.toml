@@ -8,7 +8,7 @@ readme = "README.md"
 packages = [{include = "ton_dex_tegrofinance_web_backend"}]
 
 [tool.poetry.dependencies]
-python = "^3.10,<3.11"
+python = "<3.14"
 httpx = "^0.26.0"
 pydantic-settings = "^2.1.0"
 fastapi = "^0.109.2"
