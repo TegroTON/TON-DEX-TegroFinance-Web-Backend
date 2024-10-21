@@ -701,13 +701,13 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "pytonapi"
-version = "0.1.7"
+version = "0.4.2"
 description = "Provide access to indexed TON blockchain."
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytonapi-0.1.7-py3-none-any.whl", hash = "sha256:cc0935b904cc69c78f899361532cf59b65646334040fb5f05e12d0cf3e86a8c6"},
-    {file = "pytonapi-0.1.7.tar.gz", hash = "sha256:c3f46b7db9c49ee12a446e34acf1343f371c6ad659bed0112076a3540b2bcdae"},
+    {file = "pytonapi-0.4.2-py3-none-any.whl", hash = "sha256:c6a578bba7fc34c7e45170b58bcb52500157ac217d4d069f6183a15b9b2bd7cb"},
+    {file = "pytonapi-0.4.2.tar.gz", hash = "sha256:504fccde99947a53b5ab13231414004a3345e260a2f3dc5e018bb357b235bccb"},
 ]
 
 [package.dependencies]
@@ -987,4 +987,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10,<3.11"
-content-hash = "4b3a8cbe9ef7a97ab68c8ce286f2ed9f7d2c772c6c68dea3609d61c674539697"
+content-hash = "179f7b2c47afdf50b091bf358c1fa1066bf70d52c8f2f18f9f756ba3eb77ae57"
