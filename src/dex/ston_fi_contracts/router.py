@@ -217,7 +217,6 @@ class Router:
         response = await self.tonapi_client.blockchain.execute_get_method(
             account_id=pool_address.to_string(),
             method_name="get_pool_data",
-            args=[],
         )
 
         reserve0 = int(response.stack[0].num, 16)
@@ -258,10 +257,10 @@ class Router:
         token0_amount: int,
         token1_amount: int,
     ) -> int:
-        response = await self.tonapi_client.blockchain.execute_get_method(
+        response = await self.tonapi_client.blockchain.execute_get_wallets_method(
             account_id=pool_address,
             method_name="get_expected_tokens",
-            args=[
+            arggs=[
                 f"{token1_amount}",
                 f"{token0_amount}",
             ],
@@ -276,7 +275,6 @@ class Router:
         response = await self.tonapi_client.blockchain.execute_get_method(
             account_id=lp_account_address,
             method_name="get_lp_account_data",
-            args=[],
         )
 
         token0_address = parse_address_from_bytes(

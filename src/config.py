@@ -34,6 +34,7 @@ class Ton(BaseSettings):
     tgr_contract_address: str
     fnz_contract_address: str
     scale_contract_address: str
+    host_url: str
 
 
 class Swap(BaseSettings):
@@ -68,7 +69,7 @@ class Config(BaseSettings):
     server: Server
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=".env.dist",
         env_file_encoding="utf-8",
         env_nested_delimiter="__",
     )
