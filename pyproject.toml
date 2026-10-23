@@ -2,7 +2,7 @@
 name = "ton-dex-tegrofinance-web-backend"
 version = "0.1.0"
 description = "Backend for TON-DEX-tegrofinance-web."
-authors = ["Dmitrii Kopeikin <kopeikindp@gmail.com>"]
+authors = ["Tegro"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "ton_dex_tegrofinance_web_backend"}]
