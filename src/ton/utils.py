@@ -1,9 +1,10 @@
 from pytonapi import AsyncTonapi
 from tonsdk.boc import Cell, Slice, begin_cell
 from tonsdk.utils import Address, b64str_to_bytes, bytes_to_b64str
-
 from src.ton.tonapi_client_factory import TonapiClientFactory
 
+import logging
+logger = logging.getLogger("ton-debug")
 
 def get_address_cell(address: Address | str) -> Cell:
     if isinstance(address, str):
@@ -50,11 +51,14 @@ async def get_jetton_wallet_address(
         tonapi_client = TonapiClientFactory.get_tonapi_client()
 
     owner_wallet_address_hex = get_address_cell(owner_wallet_address)
-
-    response = await tonapi_client.blockchain.execute_get_method(
+    
+    owner_wallet_address_hex_value = owner_wallet_address_hex.to_boc(False).hex()
+    logger.info("wallet address: " + owner_wallet_address_hex_value)
+    
+    response = await tonapi_client.blockchain.execute_get_wallets_method(
         account_id=jetton_contract_address,
         method_name="get_wallet_address",
-        args=[owner_wallet_address_hex.to_boc(False).hex()],
+        arggs=[owner_wallet_address_hex_value],
     )
 
     wallet_address = parse_address_from_bytes(
